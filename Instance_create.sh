@@ -1,0 +1,1 @@
+nova boot --flavor m1.large.hw  --image Cirros_Mul_PRO --nic net-id=$((neutron net-list |grep demo-net1) | awk 'NR==1{print $2}') --nic net-id=$((neutron net-list |grep demo-net2) | awk 'NR==1{print $2}')  --security-group default demo-instane1
